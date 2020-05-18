@@ -6,13 +6,12 @@ import ru.netology.domain.Book;
 import ru.netology.domain.Product;
 import ru.netology.domain.Smartphone;
 import ru.netology.exception.NotFoundException;
-import ru.netology.manager.ProductManager;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertArrayEquals;
+import static org.junit.jupiter.api.Assertions.assertThrows;
 
 class ProductRepositoryTest {
     private ProductRepository repository = new ProductRepository();
-    //private ProductManager manager = new ProductManager(repository);
     Product product1 = new Book(1, "Гарри Поттер и философский камень", 249, "Дж. К. Роулинг");
     Product product99 = new Book(99, "Гарри Поттер и тайная комната", 249, "Дж. К. Роулинг");
     Product product2 = new Book(2, "Унесенные ветром", 119, "Маргарет Митчелл");
